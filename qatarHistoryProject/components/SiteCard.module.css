@@ -1,0 +1,39 @@
+/* Site Card Specific Styles */
+
+.cardImage {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--color-sand-light);
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: var(--spacing-lg);
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  color: var(--color-maroon);
+  margin-bottom: var(--spacing-sm);
+}
+
+.cardDescription {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

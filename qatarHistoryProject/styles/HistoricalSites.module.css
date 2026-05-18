@@ -1,0 +1,37 @@
+/* Historical Sites Page Styles */
+
+.sitesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-2xl);
+  margin: var(--spacing-2xl) 0;
+}
+
+.infoSection {
+  background-color: var(--color-sand-light);
+  padding: var(--spacing-3xl) var(--spacing-md);
+  margin-top: var(--spacing-3xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.infoSection h2 {
+  font-size: var(--text-3xl);
+  color: var(--color-maroon);
+  margin-bottom: var(--spacing-lg);
+}
+
+.infoSection p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .sitesGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+}

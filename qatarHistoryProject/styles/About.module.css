@@ -1,0 +1,172 @@
+/* About Page Styles */
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--color-bg-primary);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-xl);
+
+}
+
+.card h2 {
+  font-size: var(--text-3xl);
+  color: var(--color-maroon);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 3px solid var(--color-sand);
+}
+
+.card p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.students {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.student {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--color-sand-light);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base);
+}
+
+.student:hover {
+  transform: translateY(-4px);
+}
+
+.studentIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.studentInfo h3 {
+  font-size: var(--text-xl);
+  color: var(--color-maroon);
+  margin-bottom: var(--spacing-xs);
+}
+
+.studentInfo p {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.courseInfo {
+  background-color: var(--color-sand-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+}
+
+.infoRow {
+  display: flex;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: var(--color-maroon);
+  min-width: 150px;
+  font-size: var(--text-lg);
+}
+
+.infoValue {
+  color: var(--color-text-primary);
+  font-size: var(--text-lg);
+}
+
+.insCard {
+  background-color: var(--color-bg-primary);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-xl);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.insCard h2 {
+  font-size: var(--text-3xl);
+  color: var(--color-maroon);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 3px solid var(--color-sand);
+}
+
+.insCard p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.insCard p:last-child {
+  margin-bottom: 0;
+}
+
+.instructorImage {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.instructorImage img {
+  width: 12rem;
+  height: 14rem;
+  border-radius: 3%;
+  object-fit: cover;
+  padding: 100 0 100 0
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-lg);
+  }
+
+  .card h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .card p {
+    font-size: var(--text-base);
+  }
+
+  .students {
+    grid-template-columns: 1fr;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .infoLabel {
+    min-width: auto;
+  }
+}
