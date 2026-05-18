@@ -1,0 +1,199 @@
+[
+  {
+    "id": "cmps303-sp25-MT1",
+    "courseId": "cmps303-sp25",
+    "title": "Midterm Exam",
+    "type": "midterm",
+    "dueDate": "2025-04-20T00:00:00.000Z",
+    "effortHours": 5,
+    "weight": 25,
+    "phase": null
+  },
+  {
+    "courseId": "cmpe355-sp25",
+    "title": "Quiz 1 on Chapter 2",
+    "type": "quiz",
+    "dueDate": "2025-04-15",
+    "effortHours": 2,
+    "weight": 10,
+    "id": "cmpe355-sp25-Q1"
+  },
+  {
+    "id": "cmps303-fa24-HW1",
+    "courseId": "cmps303-fa24",
+    "title": "Data Structures Assignment",
+    "type": "hw",
+    "dueDate": "2024-10-15T00:00:00.000Z",
+    "effortHours": 2,
+    "weight": 5,
+    "phase": null
+  },
+  {
+    "id": "cmpe263-fa24-MT1",
+    "courseId": "cmpe263-fa24",
+    "title": "Midterm Exam",
+    "type": "midterm",
+    "dueDate": "2024-11-01T00:00:00.000Z",
+    "effortHours": 5,
+    "weight": 25,
+    "phase": null
+  },
+  {
+    "id": "cmps323-fa24-HW1",
+    "courseId": "cmps323-fa24",
+    "title": "Algorithm Homework",
+    "type": "hw",
+    "dueDate": "2024-10-01T00:00:00.000Z",
+    "effortHours": 2,
+    "weight": 10,
+    "phase": null
+  },
+  {
+    "id": "cmps405-fa24-Q1",
+    "courseId": "cmps405-fa24",
+    "title": "Quiz 1",
+    "type": "quiz",
+    "dueDate": "2024-10-10T00:00:00.000Z",
+    "effortHours": 1,
+    "weight": 5,
+    "phase": null
+  },
+  {
+    "id": "cmpe355-fa24-PH1",
+    "courseId": "cmpe355-fa24",
+    "title": "Network Project - Phase 1",
+    "type": "project",
+    "dueDate": "2024-10-25T00:00:00.000Z",
+    "effortHours": 6,
+    "weight": 20,
+    "phase": 1
+  },
+  {
+    "id": "cmps205-su24-Q1",
+    "courseId": "cmps205-su24",
+    "title": "Logic Quiz",
+    "type": "quiz",
+    "dueDate": "2024-07-05T00:00:00.000Z",
+    "effortHours": 2,
+    "weight": 10,
+    "phase": null
+  },
+  {
+    "id": "cmps351-su24-PH1",
+    "courseId": "cmps351-su24",
+    "title": "Database Project - Phase 1",
+    "type": "project",
+    "dueDate": "2024-07-20T00:00:00.000Z",
+    "effortHours": 5,
+    "weight": 15,
+    "phase": 1
+  },
+  {
+    "id": "cmps310-su24-HW1",
+    "courseId": "cmps310-su24",
+    "title": "Software Engineering Homework",
+    "type": "hw",
+    "dueDate": "2024-07-15T00:00:00.000Z",
+    "effortHours": 3,
+    "weight": 10,
+    "phase": null
+  },
+  {
+    "id": "cmps323-su25-MT1",
+    "courseId": "cmps323-su25",
+    "title": "Algorithm Midterm",
+    "type": "midterm",
+    "dueDate": "2025-07-10T00:00:00.000Z",
+    "effortHours": 5,
+    "weight": 25,
+    "phase": null
+  },
+  {
+    "id": "cmpe263-su25-PH1",
+    "courseId": "cmpe263-su25",
+    "title": "Architecture Project - Phase 1",
+    "type": "project",
+    "dueDate": "2025-07-18T00:00:00.000Z",
+    "effortHours": 6,
+    "weight": 20,
+    "phase": 1
+  },
+  {
+    "id": "cmps350-sp25-5Y80Ik5c",
+    "courseId": "cmps350-sp25",
+    "title": "Midterm 1",
+    "type": "midterm",
+    "dueDate": "2025-04-17T00:00:00.000Z",
+    "effortHours": 1,
+    "weight": 15,
+    "phase": 1
+  },
+  {
+    "id": "cmps200-sp25-TmHAa9MD",
+    "courseId": "cmps200-sp25",
+    "title": "Assignment 1",
+    "type": "hw",
+    "dueDate": "2025-04-24T00:00:00.000Z",
+    "effortHours": 1,
+    "weight": 10,
+    "phase": 1
+  },
+  {
+    "id": "cmps200-fa24-TmHAa9MD",
+    "courseId": "cmps200-fa24",
+    "title": "Assignment 2",
+    "type": "hw",
+    "dueDate": "2024-04-24T00:00:00.000Z",
+    "effortHours": 1,
+    "weight": 10,
+    "phase": 1
+  },
+  {
+    "courseId": "cmps350-sp25",
+    "title": "Project Phase 1 !",
+    "type": "project",
+    "dueDate": "2025-04-18",
+    "effortHours": 1,
+    "weight": 10,
+    "phase": 1,
+    "id": "cmps350-sp25-rFGOv_2z"
+  },
+  {
+    "id": "cmps350-sp25-11qTx7_J",
+    "courseId": "cmps350-sp25",
+    "title": "Hw 1",
+    "type": "hw",
+    "dueDate": "2025-04-30T00:00:00.000Z",
+    "effortHours": 1,
+    "weight": 10,
+    "phase": null
+  },
+  {
+    "id": "cmps380-sp25-61fUgA5a",
+    "courseId": "cmps380-sp25",
+    "title": "Hw 1",
+    "type": "hw",
+    "dueDate": "2025-04-19T00:00:00.000Z",
+    "effortHours": 1,
+    "weight": 10,
+    "phase": null
+  },
+  {
+    "courseId": "cmpe355-sp25",
+    "title": "Hw 1",
+    "type": "hw",
+    "dueDate": "2025-04-20",
+    "effortHours": 1,
+    "weight": 5,
+    "id": "cmpe355-sp25-3yoiS3E4"
+  },
+  {
+    "courseId": "cmpe355-sp25",
+    "title": "Hw 2",
+    "type": "hw",
+    "dueDate": "2025-04-27",
+    "effortHours": 2,
+    "weight": 7,
+    "id": "cmpe355-sp25-GIpT71uk"
+  }
+]

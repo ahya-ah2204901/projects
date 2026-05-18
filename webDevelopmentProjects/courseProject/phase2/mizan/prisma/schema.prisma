@@ -1,0 +1,103 @@
+  // This is your Prisma schema file,
+  // learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+  generator client {
+    provider = "prisma-client-js"
+  }
+
+  datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+  }
+
+  model Semester {
+    id                String @id
+    label             String
+    isDefault         Boolean
+
+    // one semester -> many sections
+    sections          Section[]
+  }
+
+  model AssessmentType {
+    id                 String @id
+    label              String
+    // one assessmentType -> many assessments
+    assessments        Assessment[]
+  }
+
+  model User {
+    id                 Int       @id
+    firstName          String
+    lastName           String
+    email              String    @unique
+    password           String
+    role               String
+    program            String
+
+    // one instructor(user) -> many sections
+    taughtSections     Section[]
+
+    // one user -> many comments
+    comments           Comment[]
+
+    // many students(users) -> many sections
+    registeredSections Section[] @relation("StudentSections")
+  }
+
+  model Section {
+    crn                String     @id
+    courseCode         String
+    courseName         String
+    creditHours        Int
+    program            String
+
+    // one instructor(user) -> many sections
+    instructorId       Int
+    instructor         User   @relation(fields: [instructorId], references: [id])
+
+    // one semester -> many sections
+    semesterId         String
+    semester           Semester @relation(fields: [semesterId], references: [id])
+
+    // one section -> many assessments
+    assessments        Assessment[]
+
+    // one section -> many comments
+    comments           Comment[]
+
+    // many students(users) -> many sections
+    students           User[] @relation("StudentSections")
+  }
+
+  model Assessment {
+    id                Int @id @default(autoincrement())       
+    title             String
+    dueDate           DateTime
+    effortHours       Int
+    weight            Int
+
+    // one assessmentType -> many assessments
+    typeId            String
+    type              AssessmentType @relation(fields: [typeId], references: [id])
+    
+    // one section -> many assessments
+    sectionCRN        String
+    section           Section @relation(fields: [sectionCRN], references: [crn])
+  }
+
+  model Comment {
+    id                Int @id() @default(autoincrement())
+    title             String
+    content           String
+    createdDate       DateTime @default(now())
+    replyToCommentId  Int?
+
+    // one section -> many comments
+    sectionCRN        String
+    section           Section @relation(fields: [sectionCRN], references: [crn])
+
+    // one user -> many comments
+    authorId          Int
+    author            User @relation(fields: [authorId], references: [id])
+  }

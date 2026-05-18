@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1111",
+    "name": "Alya Student",
+    "email": "alya@student.edu",
+    "password": "123456",
+    "role": "s",
+    "program": "CS",
+    "enrolledCourseIds": [
+      "cmps303-sp25",
+      "cmps350-sp25",
+      "cmps351-sp25",
+      "cmpe355-sp25",
+      "cmps323-fa24",
+      "cmps200-fa24"
+    ]
+  },
+  {
+    "id": "2222",
+    "name": "Omar Instructor",
+    "email": "omar@instructor.edu",
+    "password": "123456",
+    "role": "i",
+    "program": "CS"
+  },
+  {
+    "id": "3333",
+    "name": "Lina Coordinator",
+    "email": "lina@coord.edu",
+    "password": "123456",
+    "role": "c",
+    "program": "CS"
+  },
+  {
+    "id": "4444",
+    "name": "Ahmed Student",
+    "email": "ahmed@student.edu",
+    "password": "123456",
+    "role": "s",
+    "program": "CS",
+    "enrolledCourseIds": [
+      "cmps303-sp25",
+      "cmps350-sp25",
+      "cmps351-sp25",
+      "cmpe355-sp25",
+      "cmps323-fa24",
+      "cmps205-fa24"
+    ]
+  },
+  {
+    "id": "5555",
+    "name": "Noora Instructor",
+    "email": "noora@instructor.edu",
+    "password": "123456",
+    "role": "i",
+    "program": "CE"
+  },
+  {
+    "id": "6666",
+    "name": "Mohamed Coordinator",
+    "email": "mohamed@coord.edu",
+    "password": "123456",
+    "role": "c",
+    "program": "CE"
+  }
+]

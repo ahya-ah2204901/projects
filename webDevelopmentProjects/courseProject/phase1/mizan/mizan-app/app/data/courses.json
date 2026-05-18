@@ -1,0 +1,202 @@
+[
+  {
+    "id": "cmps200-sp25",
+    "code": "cmps200",
+    "title": "Computer Ethics",
+    "description": "Covers ethical and societal issues in computing including privacy, security, and intellectual property.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "sp25"
+  },
+  {
+    "id": "cmps205-su24",
+    "code": "cmps205",
+    "title": "Discrete Structures for Computing",
+    "description": "Introduces logic, set theory, relations, functions, and combinatorics as foundational tools in computer science.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "su24"
+  },
+  {
+    "id": "cmps303-fa24",
+    "code": "cmps303",
+    "title": "Data Structures",
+    "description": "Focuses on data organization, including arrays, linked lists, stacks, queues, trees, and graphs.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "fa24"
+  },
+  {
+    "id": "cmps323-su25",
+    "code": "cmps323",
+    "title": "Design and Analysis of Algorithms",
+    "description": "Covers advanced algorithm design strategies including divide-and-conquer, dynamic programming, and greedy algorithms.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "su25"
+  },
+  {
+    "id": "cmps351-su24",
+    "code": "cmps351",
+    "title": "Fundamentals of Database Systems",
+    "description": "Introduces relational databases, query languages, normalization, and database design.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "su24"
+  },
+  {
+    "id": "cmpe263-fa24",
+    "code": "cmpe263",
+    "title": "Computer Architecture and Organization I",
+    "description": "Explores the structure and functionality of digital computers, including CPU design and memory hierarchy.",
+    "creditHours": 3,
+    "instructorId": "5555",
+    "program": "CE",
+    "sem": "fa24"
+  },
+  {
+    "id": "cmps310-fa25",
+    "code": "cmps310",
+    "title": "Software Engineering",
+    "description": "Covers software development lifecycle, requirements engineering, design patterns, and testing.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "fa25"
+  },
+  {
+    "id": "cmpe355-sp25",
+    "code": "cmpe355",
+    "title": "Data Communication and Computer Networks I",
+    "description": "Covers principles of data transmission, OSI layers, and protocols used in computer networks.",
+    "creditHours": 3,
+    "instructorId": "5555",
+    "program": "CE",
+    "sem": "sp25"
+  },
+  {
+    "id": "cmps380-sp25",
+    "code": "cmps380",
+    "title": "Cybersecurity Fundamentals",
+    "description": "Introduces security concepts such as threats, vulnerabilities, cryptography, and risk management.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "sp25"
+  },
+  {
+    "id": "cmps350-sp25",
+    "code": "cmps350",
+    "title": "Web Development Fundamentals",
+    "description": "Covers the basics of building responsive websites using HTML, CSS, and JavaScript.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "sp25"
+  },
+  {
+    "id": "cmps405-su24",
+    "code": "cmps405",
+    "title": "Operating Systems",
+    "description": "Covers OS concepts like processes, memory management, scheduling, and file systems.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "su24"
+  },
+  {
+    "id": "cmps200-fa24",
+    "code": "cmps200",
+    "title": "Computer Ethics",
+    "description": "Discusses ethical dilemmas in modern computing environments.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "fa24"
+  },
+  {
+    "id": "cmps303-sp25",
+    "code": "cmps303",
+    "title": "Data Structures",
+    "description": "Analyzes performance and implementation of core data structures.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "sp25"
+  },
+  {
+    "id": "cmps205-fa25",
+    "code": "cmps205",
+    "title": "Discrete Structures for Computing",
+    "description": "Foundational math topics used in algorithm design and computer science theory.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "fa25"
+  },
+  {
+    "id": "cmps323-fa24",
+    "code": "cmps323",
+    "title": "Design and Analysis of Algorithms",
+    "description": "Efficiency and complexity analysis of algorithms in software development.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "fa24"
+  },
+  {
+    "id": "cmpe263-su25",
+    "code": "cmpe263",
+    "title": "Computer Architecture and Organization I",
+    "description": "Focuses on low-level design and microarchitecture of modern processors.",
+    "creditHours": 3,
+    "instructorId": "5555",
+    "program": "CE",
+    "sem": "su25"
+  },
+  {
+    "id": "cmps310-su24",
+    "code": "cmps310",
+    "title": "Software Engineering",
+    "description": "Best practices and methodologies for building large software systems.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "su24"
+  },
+  {
+    "id": "cmps351-sp25",
+    "code": "cmps351",
+    "title": "Fundamentals of Database Systems",
+    "description": "Comprehensive intro to RDBMS, schema design, and query optimization.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "sp25"
+  },
+  {
+    "id": "cmps405-fa24",
+    "code": "cmps405",
+    "title": "Operating Systems",
+    "description": "Explores concurrency, resource management, and system-level software.",
+    "creditHours": 3,
+    "instructorId": "2222",
+    "program": "CS",
+    "sem": "fa24"
+  },
+  {
+    "id": "cmpe355-fa24",
+    "code": "cmpe355",
+    "title": "Data Communication and Computer Networks I",
+    "description": "Introduction to protocols, switching, and network layers.",
+    "creditHours": 3,
+    "instructorId": "5555",
+    "program": "CE",
+    "sem": "fa24"
+  }
+]
