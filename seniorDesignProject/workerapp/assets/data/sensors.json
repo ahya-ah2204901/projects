@@ -1,0 +1,42 @@
+[
+    {
+        "id": "s001",
+        "type": "Temperature",
+        "workerId": "u002"
+    },
+    {
+        "id": "s002",
+        "type": "Humidity",
+        "workerId": "u002"
+    },
+    {
+        "id": "s003",
+        "type": "Body Temperature",
+        "workerId": "u002"
+    },
+    {
+        "id": "s004",
+        "type": "Heart Rate",
+        "workerId": "u002"
+    },
+    {
+        "id": "s005",
+        "type": "Temperature",
+        "workerId": "u003"
+    },
+    {
+        "id": "s006",
+        "type": "Humidity",
+        "workerId": "u003"
+    },
+    {
+        "id": "s007",
+        "type": "Body Temperature",
+        "workerId": "u003"
+    },
+    {
+        "id": "s008",
+        "type": "Heart Rate",
+        "workerId": "u003"
+    }
+]

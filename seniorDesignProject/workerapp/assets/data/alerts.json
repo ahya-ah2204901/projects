@@ -1,0 +1,29 @@
+[
+    {
+        "id": "a001",
+        "workerId": "u002",
+        "readingId": "r002",
+        "time": "2025-11-06T08:31:30",
+        "severityLevel": "HIGH",
+        "description": "Abnormal temperature detected from sensor s001 (39.5°C).",
+        "status": "PENDING"
+    },
+    {
+        "id": "a002",
+        "workerId": "u002",
+        "readingId": "r004",
+        "time": "2025-11-06T08:40:10",
+        "severityLevel": "MEDIUM",
+        "description": "Heart rate spike detected (96 bpm) from sensor s002.",
+        "status": "ACKNOWLEDGED"
+    },
+    {
+        "id": "a003",
+        "workerId": "u003",
+        "readingId": "r005",
+        "time": "2025-11-06T09:01:00",
+        "severityLevel": "LOW",
+        "description": "Minor vibration anomaly in Zone C (sensor s003).",
+        "status": "RESOLVED"
+    }
+]

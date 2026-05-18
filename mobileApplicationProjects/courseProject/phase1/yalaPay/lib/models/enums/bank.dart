@@ -1,0 +1,19 @@
+enum Bank {
+  QatarNationalBank,
+  DohaBank,
+  CommercialBank,
+  QatarInternationalIslamicBank,
+  QatarIslamicBank,
+  QatarDevelopmentBank,
+  ArabBank,
+  Ahlibank,
+  MashreqBank,
+  HSBCBankMiddleEast,
+  BNPParibas,
+  BankSaderatIran,
+  UnitedBankltd,
+  StandardCharteredBank,
+  MasrafAlRayan,
+  InternationalBankofQatar,
+  BarwaBank
+}

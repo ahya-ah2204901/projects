@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "710392346049",
+    "project_id": "exosuitapp",
+    "storage_bucket": "exosuitapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710392346049:android:677604cdd0abb346442b40",
+        "android_client_info": {
+          "package_name": "com.example.workerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaqIpgVy-CbmUPU14S3sepOvhqr9iVaJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

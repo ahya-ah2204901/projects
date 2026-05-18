@@ -1,0 +1,29 @@
+[
+  {
+    "id": "u001",
+    "email": "admin@factory.com",
+    "password": "admin123",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "role": "Supervisor",
+    "supervisorId": ""
+  },
+  {
+    "id": "u002",
+    "email": "worker1@factory.com",
+    "password": "worker123",
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "role": "Worker",
+    "supervisorId": "u001"
+  },
+  {
+    "id": "u003",
+    "email": "worker2@factory.com",
+    "password": "worker123",
+    "firstName": "Charlie",
+    "lastName": "Lee",
+    "role": "Worker",
+    "supervisorId": "u001"
+  }
+]
