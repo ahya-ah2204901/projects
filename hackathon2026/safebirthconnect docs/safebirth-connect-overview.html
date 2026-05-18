@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBirth Connect - Technical Solution Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --coral: #E07A5F;
+            --coral-light: #F4A896;
+            --sage: #81B29A;
+            --sage-dark: #5E9178;
+            --cream: #FDF6ED;
+            --sand: #F2E9DE;
+            --charcoal: #2D3436;
+            --slate: #4A5568;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(45, 52, 54, 0.08);
+            --shadow-md: 0 8px 24px rgba(45, 52, 54, 0.12);
+            --shadow-lg: 0 16px 48px rgba(45, 52, 54, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 50%, var(--sage) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: rgba(255,255,255,0.95);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .stat {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .stat-value {
+            font-family: 'Fraunces', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .nav-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav a {
+            color: var(--slate);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .nav a:hover {
+            color: var(--coral);
+            border-bottom-color: var(--coral);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--slate);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 4rem;
+            box-shadow: var(--shadow-md);
+            margin: 3rem auto;
+            max-width: 1000px;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem-card {
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: var(--cream);
+            border-left: 4px solid var(--coral);
+        }
+
+        .problem-card h4 {
+            color: var(--coral);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .problem-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+        }
+
+        /* Solution Flow */
+        .flow-container {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+            margin: 3rem 0;
+        }
+
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .flow-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 60px;
+            width: 3px;
+            height: calc(100% - 20px);
+            background: linear-gradient(180deg, var(--sage) 0%, var(--sage-dark) 100%);
+            border-radius: 2px;
+        }
+
+        .flow-number {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .flow-content {
+            flex: 1;
+            padding-top: 0.5rem;
+        }
+
+        .flow-content h4 {
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .flow-content p {
+            color: var(--slate);
+            margin-bottom: 0.75rem;
+        }
+
+        .sms-example {
+            background: var(--charcoal);
+            color: #7FFF7F;
+            font-family: 'Monaco', 'Consolas', monospace;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-top: 0.75rem;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Architecture */
+        .arch-diagram {
+            background: var(--charcoal);
+            border-radius: 20px;
+            padding: 2.5rem;
+            color: var(--white);
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .arch-diagram pre {
+            white-space: pre;
+            line-height: 1.5;
+        }
+
+        /* Tech Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--sage);
+        }
+
+        .tech-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .tech-card h4 {
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+
+        .tech-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--sand);
+            color: var(--slate);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Features Table */
+        .features-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .features-table th,
+        .features-table td {
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+        }
+
+        .features-table th {
+            background: var(--charcoal);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .features-table tr:nth-child(even) {
+            background: var(--cream);
+        }
+
+        .features-table td {
+            border-bottom: 1px solid var(--sand);
+        }
+
+        .check {
+            color: var(--sage-dark);
+            font-weight: 700;
+        }
+
+        .cross {
+            color: var(--coral);
+        }
+
+        /* User Roles */
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .role-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .role-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+        }
+
+        .role-card.mother::before {
+            background: linear-gradient(90deg, var(--coral), var(--coral-light));
+        }
+
+        .role-card.volunteer::before {
+            background: linear-gradient(90deg, var(--sage), var(--sage-dark));
+        }
+
+        .role-card.ngo::before {
+            background: linear-gradient(90deg, var(--slate), var(--charcoal));
+        }
+
+        .role-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .role-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .role-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .role-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--slate);
+        }
+
+        .role-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 19px;
+            top: 48px;
+            width: 2px;
+            height: calc(100% - 28px);
+            background: var(--sand);
+        }
+
+        .timeline-marker {
+            width: 40px;
+            height: 40px;
+            background: var(--sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-content h4 {
+            color: var(--charcoal);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-duration {
+            color: var(--coral);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--slate);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1f21 100%);
+            border-radius: 24px;
+            padding: 4rem;
+            text-align: center;
+            color: var(--white);
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: var(--sage);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.8);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--coral);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #c96a52;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--slate);
+            border-top: 1px solid var(--sand);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1.5rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .problem-section {
+                padding: 2rem;
+                margin: 1.5rem;
+            }
+
+            .flow-container {
+                padding: 1.5rem;
+            }
+
+            .arch-diagram {
+                padding: 1.5rem;
+                font-size: 0.7rem;
+            }
+
+            .cta-section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        /* Bilingual Support Note */
+        .bilingual-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--sand);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+
+        .bilingual-badge span {
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            margin-bottom: 0.75rem;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-box li {
+            padding: 0.25rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .highlight-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Technical Solution Overview</span>
+            <h1>SafeBirth Connect</h1>
+            <p class="hero-subtitle">
+                SMS-First Maternal Support Network for Crisis & Low-Resource Settings
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">SMS</span>
+                    <span class="stat-label">Primary Channel</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Offline Capable</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">$0</span>
+                    <span class="stat-label">Cloud Dependency</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#problem">Problem</a>
+            <a href="#solution">Solution</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#tech-stack">Tech Stack</a>
+            <a href="#users">User Roles</a>
+            <a href="#timeline">Timeline</a>
+        </div>
+    </nav>
+
+    <!-- Problem Section -->
+    <section id="problem">
+        <div class="problem-section">
+            <div class="section-header">
+                <h2>The Problem</h2>
+                <p>In displacement camps and crisis settings, pregnant women face critical barriers to receiving timely care</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h4>No Internet Access</h4>
+                    <p>WiFi and mobile data are unreliable or completely unavailable in most crisis settings</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Basic Phones Only</h4>
+                    <p>Many women only have access to feature phones—no smartphones or apps</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Overwhelmed Systems</h4>
+                    <p>Existing health infrastructure is absent, informal, or completely overwhelmed</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Uncoordinated Help</h4>
+                    <p>Local volunteers (midwives, experienced mothers) exist but aren't connected or organized</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <h4>💡 The Insight</h4>
+                <p>SMS works when nothing else does. It requires no internet, works on any phone, and is familiar to everyone. We can build a complete coordination system on top of simple text messages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution">
+        <div class="section-header">
+            <h2>The Solution</h2>
+            <p>A hybrid SMS + Optional App system that coordinates maternal care through local volunteers</p>
+        </div>
+
+        <div class="bilingual-badge">
+            <span>🌍</span>
+            <span>Arabic + English</span> support built-in from day one
+        </div>
+
+        <div class="flow-container">
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <div class="flow-number">1</div>
+                    <div class="flow-content">
+                        <h4>Registration via SMS</h4>
+                        <p>Pregnant women and volunteers register by sending a simple structured SMS. No app required, no internet needed.</p>
+                        <div class="sms-example">
+REG MOTHER<br>
+CAMP A<br>
+ZONE 3<br>
+DUE 15-02<br>
+RISK HIGH
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-number">2</div>
+                    <div class="flow-content">
+                        <h4>Help Request</h4>
+                        <p>When a mother needs assistance—whether emergency or routine support—she sends a simple SMS command.</p>
+                        <div class="sms-example">
+EMERGENCY HELP<br>
+<span style="color: #888;">— or —</span><br>
+SUPPORT REQUEST
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-number">3</div>
+                    <div class="flow-content">
+                        <h4>Smart Matching</h4>
+                        <p>System automatically matches based on: zone proximity, volunteer certification level, availability status, and urgency.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-number">4</div>
+                    <div class="flow-content">
+                        <h4>Multi-Volunteer Alert</h4>
+                        <p>Multiple nearby volunteers receive SMS alerts simultaneously. First to respond accepts the case—others get auto-closure notification.</p>
+                        <div class="sms-example">
+🚨 EMERGENCY Zone 3<br>
+Risk: HIGH | Due: 2 days<br>
+Reply ACCEPT 4721 to respond
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-number">5</div>
+                    <div class="flow-content">
+                        <h4>Confirmation Loop</h4>
+                        <p>Both mother and volunteer receive confirmation. Case is tracked until closed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <div class="section-header">
+            <h2>System Overview</h2>
+            <p>Designed for zero-internet operation with optional connectivity enhancements</p>
+        </div>
+
+        <div class="arch-diagram">
+            <pre>
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                              SAFEBIRTH CONNECT                                   │
+│                          Zero-Cost POC Architecture                              │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                  │
+│    ┌──────────────┐         ┌─────────────────────────────────────────────┐     │
+│    │              │   SMS   │              LOCAL SERVER                    │     │
+│    │   MOTHERS    │────────▶│         (Laptop / Raspberry Pi)             │     │
+│    │  (phone ID)  │         │                                             │     │
+│    └──────────────┘         │   ┌─────────────────────────────────────┐   │     │
+│                             │   │          SPRING BOOT                 │   │     │
+│    ┌──────────────┐         │   │  ┌───────────┐  ┌─────────────────┐ │   │     │
+│    │              │   SMS   │   │  │    SMS    │  │    Matching     │ │   │     │
+│    │  VOLUNTEERS  │◀───────▶│   │  │  Gateway  │  │    Engine       │ │   │     │
+│    │              │         │   │  └───────────┘  └─────────────────┘ │   │     │
+│    └──────────────┘         │   │  ┌───────────┐  ┌─────────────────┐ │   │     │
+│          │                  │   │  │ SQLite /  │  │   REST API      │ │   │     │
+│          │ WiFi             │   │  │    H2     │  │  (for App)      │ │   │     │
+│          ▼                  │   │  └───────────┘  └─────────────────┘ │   │     │
+│    ┌──────────────┐         │   └─────────────────────────────────────┘   │     │
+│    │   FLUTTER    │◀────────┼──────────────────────┘                       │     │
+│    │     APP      │  HTTP   │                                             │     │
+│    │              │         │   FLUTTER APP FEATURES:                     │     │
+│    │  • Volunteer │         │   ┌─────────────────────────────────────┐   │     │
+│    │    Inbox     │         │   │  📱 Offline Case Inbox (SQLite)      │   │     │
+│    │  • Dashboard │         │   │  📊 Dashboard (when connected)       │   │     │
+│    │  • NGO View  │         │   │  🗺️  Zone Coverage & Heat Maps       │   │     │
+│    └──────────────┘         │   │  📈 Due Date Clustering              │   │     │
+│                             │   │  👥 Volunteer Availability           │   │     │
+│                             │   └─────────────────────────────────────┘   │     │
+│                             └─────────────────────────────────────────────┘     │
+│                                                                                  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+                         SMS GATEWAY OPTIONS (POC)
+    ┌────────────────────────────────────────────────────────────────┐
+    │  OPTION A: Mock Gateway (Development)                          │
+    │  └─▶ Simulated SMS via REST API — Perfect for testing          │
+    │                                                                │
+    │  OPTION B: Android Phone Gateway (Demo/Field)                  │
+    │  └─▶ Old Android phone + SIM acts as SMS modem                 │
+    │  └─▶ Free apps: SMS Gateway, Macrodroid                        │
+    │  └─▶ Cost: $0 (use existing SMS bundle)                        │
+    │                                                                │
+    │  OPTION C: Twilio/Africa's Talking (Production)                │
+    │  └─▶ When ready for scale — paid tier                          │
+    └────────────────────────────────────────────────────────────────┘
+            </pre>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech-stack">
+        <div class="section-header">
+            <h2>Technology Stack</h2>
+            <p>Battle-tested technologies optimized for low-resource deployment</p>
+        </div>
+
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">☕</div>
+                <h4>Backend</h4>
+                <p>Spring Boot handles SMS processing, matching logic, and serves the dashboard API</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Spring Boot 3.x</span>
+                    <span class="tech-tag">Java 21</span>
+                    <span class="tech-tag">JPA</span>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">🗄️</div>
+                <h4>Database</h4>
+                <p>Lightweight, zero-config database that runs anywhere—even on a Raspberry Pi</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">H2 (dev)</span>
+                    <span class="tech-tag">Single File</span>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">📱</div>
+                <h4>Mobile App + Dashboard</h4>
+                <p>Flutter app for volunteers & NGOs—offline case inbox + dashboard when connected to local server</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">sqflite</span>
+                    <span class="tech-tag">BLoC</span>
+                    <span class="tech-tag">fl_chart</span>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">📊</div>
+                <h4>Dashboard Features</h4>
+                <p>Built into Flutter app—zone coverage maps, due date clustering, volunteer availability charts</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Heat Maps</span>
+                    <span class="tech-tag">Charts</span>
+                    <span class="tech-tag">Offline-First</span>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">📨</div>
+                <h4>SMS Gateway</h4>
+                <p>Abstracted gateway layer—swap implementations without code changes</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Mock (dev)</span>
+                    <span class="tech-tag">Android GW</span>
+                    <span class="tech-tag">Twilio</span>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">🖥️</div>
+                <h4>Deployment</h4>
+                <p>Runs on any laptop or Raspberry Pi—no cloud required</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Raspberry Pi</span>
+                    <span class="tech-tag">Portable</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Roles -->
+    <section id="users">
+        <div class="section-header">
+            <h2>User Roles</h2>
+            <p>Three distinct user types with carefully scoped permissions</p>
+        </div>
+
+        <div class="roles-grid">
+            <div class="role-card mother">
+                <div class="role-emoji">👩</div>
+                <h4>Pregnant Women</h4>
+                <ul>
+                    <li>Register via SMS (any phone)</li>
+                    <li>Request emergency or routine help</li>
+                    <li>Identified by unique phone number</li>
+                    <li>Optional app for easier registration</li>
+                </ul>
+            </div>
+
+            <div class="role-card volunteer">
+                <div class="role-emoji">🤝</div>
+                <h4>Volunteers</h4>
+                <ul>
+                    <li>Certified (midwife, nurse) or community</li>
+                    <li>Receive alerts via SMS</li>
+                    <li>Accept/decline cases</li>
+                    <li>Offline case inbox in app</li>
+                    <li>View dashboards when connected</li>
+                </ul>
+            </div>
+
+            <div class="role-card ngo">
+                <div class="role-emoji">🏥</div>
+                <h4>NGO Coordinators</h4>
+                <ul>
+                    <li>Dashboard in Flutter app</li>
+                    <li>Read-only aggregated data</li>
+                    <li>Zone coverage heat maps</li>
+                    <li>Demand trends & gaps</li>
+                    <li>Inform volunteer deployment</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- MVP Scope -->
+    <section>
+        <div class="section-header">
+            <h2>MVP Scope</h2>
+            <p>Focused feature set for proof-of-concept validation</p>
+        </div>
+
+        <table class="features-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>MVP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SMS registration (mothers & volunteers)</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Emergency & support requests</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Skill-based volunteer matching</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Dashboard in Flutter app</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Volunteer offline case inbox</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Flutter app (volunteers & NGO)</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Arabic + English support</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Mock SMS gateway for testing</td>
+                    <td class="check">✓</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+        <div class="section-header">
+            <h2>Development Timeline</h2>
+            <p>Estimated 6 weeks for complete MVP (part-time development)</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">1</div>
+                <div class="timeline-content">
+                    <h4>SMS Core + Registration</h4>
+                    <div class="timeline-duration">Week 1-2</div>
+                    <p>SMS gateway abstraction, command parsing, mother & volunteer registration flows, mock gateway with simulator UI</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">2</div>
+                <div class="timeline-content">
+                    <h4>Matching & Notifications</h4>
+                    <div class="timeline-duration">Week 3</div>
+                    <p>Help request processing, skill-based matching algorithm, multi-volunteer notification, first-accept-wins logic</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">3</div>
+                <div class="timeline-content">
+                    <h4>Flutter App + Dashboard</h4>
+                    <div class="timeline-duration">Week 4-5</div>
+                    <p>Volunteer offline case inbox, SMS intent bridge, local SQLite storage, availability management, dashboard with zone coverage charts and heat maps</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">4</div>
+                <div class="timeline-content">
+                    <h4>Polish & Testing</h4>
+                    <div class="timeline-duration">Week 6</div>
+                    <p>Arabic language support, end-to-end testing, documentation, Android phone gateway integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+        <div class="cta-section">
+            <h2>Ready to Build?</h2>
+            <p>This POC can be developed entirely on a laptop with zero cloud costs. Let's start with the Spring Boot backend.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">
+                    <span>Start with Backend</span>
+                    <span>→</span>
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <span>View PRD Document</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>SafeBirth Connect — Technical Solution Overview</p>
+        <p style="margin-top: 0.5rem; opacity: 0.7;">Designed for humanitarian deployment in low-resource settings</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+# SafeBirth Connect — Cursor Rules
+
+## Project Overview
+SafeBirth Connect is an SMS-first maternal support coordination system for crisis settings.
+- Backend: Java 17, Spring Boot 3.2.x, H2, Twilio SDK
+- Mobile: Flutter, Riverpod 2.x, Dio, sqflite, go_router, Freezed
+- Languages: Arabic + English (bilingual support)
+
+## Code Style
+
+### Java/Spring Boot
+- Use Java 17 features: records, pattern matching, sealed classes
+- Follow package structure: `com.safebirth.<feature>.<layer>`
+- Use Lombok annotations: @Getter, @Setter, @Builder, @RequiredArgsConstructor
+- All services should be @Transactional(readOnly = true) by default
+- Use @Transactional for write operations
+- Log at appropriate levels: INFO for business events, DEBUG for flow details, WARN for issues
+- Phone numbers in logs should be masked for privacy
+
+### Flutter/Dart
+- Feature-first folder structure: `features/<feature>/data|domain|presentation`
+- Use Riverpod for state management with code generation
+- Use Freezed for immutable data classes
+- Use go_router for navigation
+- All user-facing strings must use localization (AppLocalizations)
+- Support RTL layouts for Arabic
+
+## Naming Conventions
+
+### Java
+- Classes: PascalCase (MotherService, HelpRequest)
+- Methods/Variables: camelCase (findByPhone, phoneNumber)
+- Constants: UPPER_SNAKE_CASE (MAX_RETRIES)
+- Packages: lowercase (com.safebirth.domain.mother)
+
+### Dart
+- Classes: PascalCase (DashboardScreen, CaseModel)
+- Files: snake_case (dashboard_screen.dart)
+- Variables/Functions: camelCase (fetchCases, isLoading)
+- Constants: lowerCamelCase or UPPER_SNAKE_CASE
+
+## SMS Commands Reference
+
+| Action | English | Arabic |
+|--------|---------|--------|
+| Register Mother | `REG MOTHER [camp] [zone]` | `تسجيل ام [مخيم] [منطقة]` |
+| Register Volunteer | `REG VOLUNTEER [camp] [zones]` | `تسجيل متطوع [مخيم] [مناطق]` |
+| Emergency | `EMERGENCY` / `SOS` | `طوارئ` |
+| Support | `SUPPORT` | `مساعدة` |
+| Accept Case | `ACCEPT HR-xxxx` | `قبول xxxx` |
+| Complete Case | `COMPLETE HR-xxxx` | `انهاء xxxx` |
+| Available | `AVAILABLE` | `متاح` |
+| Busy | `BUSY` | `مشغول` |
+
+## Error Handling
+
+### Backend
+- Use GlobalExceptionHandler for REST exceptions
+- Custom exceptions: SmsDeliveryException, ResourceNotFoundException
+- Always return meaningful error messages
+- Never expose stack traces in production
+
+### Flutter
+- Use sealed classes for API exceptions
+- Handle offline scenarios gracefully
+- Show user-friendly error messages
+- Implement retry logic for network failures
+
+## Testing Guidelines
+
+### Backend
+- Unit tests for services with mocked dependencies
+- Integration tests for controllers with MockMvc
+- Test SMS parsing for both Arabic and English
+- Test matching algorithm with various scenarios
+
+### Flutter
+- Widget tests for UI components
+- Unit tests for providers and services
+- Integration tests for critical flows
+
+## Planning Protocol
+
+Before implementing new features:
+1. Check if a plan exists in `plans/` directory
+2. Update PROGRESS.md status to "In Progress"
+3. Follow the phase plan step by step
+4. Update PROGRESS.md to "Completed" when done
+5. Create/update tests as specified
+
+## Security Notes (POC)
+
+- No authentication implemented for POC
+- Phone number used as identifier
+- CORS is wide open for development
+- Twilio credentials via environment variables
+- H2 database for simplicity (use PostgreSQL in production)
+
+## File Structure
+
+```
+safebirthconnect/
+├── backend/                     # Spring Boot backend
+│   └── src/main/java/com/safebirth/
+│       ├── config/              # Configuration classes
+│       ├── sms/                 # SMS handling
+│       ├── domain/              # Business entities
+│       ├── matching/            # Volunteer matching
+│       ├── api/                 # REST controllers
+│       └── exception/           # Exception handling
+├── mobile/                      # Flutter app
+│   └── lib/
+│       ├── core/                # Core utilities
+│       ├── features/            # Feature modules
+│       └── shared/              # Shared widgets
+├── plans/                       # Phase plans
+└── .cursor/rules                # This file
+```

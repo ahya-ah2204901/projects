@@ -1,0 +1,364 @@
+[
+  {
+    "gradeLevel": "2",
+    "compId": "2.1",
+    "comp": "Reading Data",
+    "topics": [
+      { "topicId": "2.1.01", "topic": "Exploring What Graphs Are Using Pictures" }
+    ]
+  },
+  {
+    "gradeLevel": "2",
+    "compId": "2.2",
+    "comp": "Numbers up to 999",
+    "topics": [
+      { "topicId": "2.2.01", "topic": "Counting from 1-99" },
+      { "topicId": "2.2.02", "topic": "Comparing Numbers from 1-19" },
+      { "topicId": "2.2.03", "topic": "Comparing Numbers from 1-99" },
+      { "topicId": "2.2.04", "topic": "Arranging Numbers from 1-99" },
+      { "topicId": "2.2.05", "topic": "Simple Addition of Numbers from 1-99" },
+      { "topicId": "2.2.06", "topic": "Adding with a Carry of Numbers from 1-99" },
+      { "topicId": "2.2.07", "topic": "Simple Subtraction of Numbers from 1-99" },
+      { "topicId": "2.2.08", "topic": "Subtraction with Borrowing of Numbers from 1-99" },
+      { "topicId": "2.2.09", "topic": "The Number 100" },
+      { "topicId": "2.2.10", "topic": "Counting Using Hundreds" },
+      { "topicId": "2.2.11", "topic": "Writing 3-Digit Numbers" },
+      { "topicId": "2.2.12", "topic": "Comparing 3-Digit Numbers" },
+      { "topicId": "2.2.13", "topic": "Arranging Numbers from 1-999" },
+      { "topicId": "2.2.14", "topic": "Adding and Subtracting Hundreds and Tens" },
+      { "topicId": "2.2.15", "topic": "Simple Addition of Numbers from 1-999" },
+      { "topicId": "2.2.16", "topic": "Adding with a Carry of Numbers from 1-999" },
+      { "topicId": "2.2.17", "topic": "Simple Subtraction of Numbers from 1-999" },
+      { "topicId": "2.2.18", "topic": "Subtraction with Borrowing of Numbers from 1-999" }
+    ]
+  },
+  {
+    "gradeLevel": "2",
+    "compId": "2.3",
+    "comp": "Time",
+    "topics": [
+      { "topicId": "2.3.01", "topic": "Writing and Reading the Time to 'O'clock' and 'Half the Hour'" }
+    ]
+  },
+  {
+    "gradeLevel": "2",
+    "compId": "2.4",
+    "comp": "Geometry",
+    "topics": [
+      { "topicId": "2.4.01", "topic": "Naming and Understanding Shapes" },
+      { "topicId": "2.4.02", "topic": "Identical Shapes" },
+      { "topicId": "2.4.03", "topic": "Symmetry" },
+      { "topicId": "2.4.04", "topic": "Forming Shapes by Combining Multiple Shapes" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.1",
+    "comp": "Graphs",
+    "topics": [
+      { "topicId": "3.1.01", "topic": "Creating a Graph Using Shapes and Pictures" },
+      { "topicId": "3.1.02", "topic": "Creating a Graph Using Columns" },
+      { "topicId": "3.1.03", "topic": "Creating Bar Graphs" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.2",
+    "comp": "Numbers up to 9999",
+    "topics": [
+      { "topicId": "3.2.01", "topic": "Counting Things" },
+      { "topicId": "3.2.02", "topic": "The Number 1000" },
+      { "topicId": "3.2.03", "topic": "Counting from 1-9999" },
+      { "topicId": "3.2.04", "topic": "Writing 4-Digit Numbers" },
+      { "topicId": "3.2.05", "topic": "Comparing Between 4-Digit Numbers" },
+      { "topicId": "3.2.06", "topic": "Arranging 4-Digit Numbers" },
+      { "topicId": "3.2.07", "topic": "Adding and Subtracting Numbers of Hundreds and Thousands" },
+      { "topicId": "3.2.08", "topic": "Addition with and Without Carry" },
+      { "topicId": "3.2.09", "topic": "Subtraction with and Without Borrowing" },
+      { "topicId": "3.2.10", "topic": "Subtracting Numbers that Include 0 in its Digits" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.3",
+    "comp": "Geometry",
+    "topics": [
+      { "topicId": "3.3.01", "topic": "Intro to Shapes and Lines in Geometry" },
+      { "topicId": "3.3.02", "topic": "Geometrical Shapes" },
+      { "topicId": "3.3.03", "topic": "Parallel and Perpendicular Lines" },
+      { "topicId": "3.3.04", "topic": "Line of Symmetry" },
+      { "topicId": "3.3.05", "topic": "Surfaces, Edges, and Vertices of Shapes" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.4",
+    "comp": "Multiplication",
+    "topics": [
+      { "topicId": "3.4.01", "topic": "Explaining the Concept of Multiplication" },
+      { "topicId": "3.4.02", "topic": "Multiplying by 2" },
+      { "topicId": "3.4.03", "topic": "Multiplying by 3" },
+      { "topicId": "3.4.04", "topic": "Multiplying by 4" },
+      { "topicId": "3.4.05", "topic": "Multiplying by 5" },
+      { "topicId": "3.4.06", "topic": "Multiplying by 6" },
+      { "topicId": "3.4.07", "topic": "Multiplying by 7" },
+      { "topicId": "3.4.08", "topic": "Multiplying by 8" },
+      { "topicId": "3.4.09", "topic": "Multiplying by 9" },
+      { "topicId": "3.4.10", "topic": "Multiplying by 1 and 0" },
+      { "topicId": "3.4.11", "topic": "Exploring the Multiplication Pattern of Multiplying by 2 and 5" },
+      { "topicId": "3.4.12", "topic": "Exploring the Multiplication Pattern of Multiplying by 9" },
+      { "topicId": "3.4.13", "topic": "Multiplying a 2-Digit Number by a 1-Digit Number" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.5",
+    "comp": "Division",
+    "topics": [
+      { "topicId": "3.5.01", "topic": "Dividing by Creating Smaller Equalized Groups" },
+      { "topicId": "3.5.02", "topic": "The Relation Between Multiplication and Division" },
+      { "topicId": "3.5.03", "topic": "Even and Odd Numbers" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.6",
+    "comp": "Fractions",
+    "topics": [
+      { "topicId": "3.6.01", "topic": "Fractions" },
+      { "topicId": "3.6.02", "topic": "Comparing and Arranging Fractions" },
+      { "topicId": "3.6.03", "topic": "Adding Two Fractions that Have the Same Denominator" },
+      { "topicId": "3.6.04", "topic": "Subtracting Two Fractions that Have the Same Denominator" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.7",
+    "comp": "Measurements",
+    "topics": [
+      { "topicId": "3.7.01", "topic": "Length" },
+      { "topicId": "3.7.02", "topic": "Mass" },
+      { "topicId": "3.7.03", "topic": "Capacity" },
+      { "topicId": "3.7.04", "topic": "Understanding the Concept of Circumference" },
+      { "topicId": "3.7.05", "topic": "Understanding the Concept of Area" }
+    ]
+  },
+  {
+    "gradeLevel": "3",
+    "compId": "3.8",
+    "comp": "Time",
+    "topics": [
+      { "topicId": "3.8.01", "topic": "Reading and Writing Time as Quarters of an Hour" },
+      { "topicId": "3.8.02", "topic": "Reading and Writing Every 10 Minutes of an Hour" },
+      { "topicId": "3.8.03", "topic": "Reading and Writing Every 5 Minutes of an Hour" },
+      { "topicId": "3.8.04", "topic": "Understanding Durations" }
+    ]
+  },
+  {
+    "gradeLevel": "4",
+    "compId": "4.1",
+    "comp": "Graphs",
+    "topics": [
+      { "topicId": "4.1.01", "topic": "Creating a Graph Using Columns" },
+      { "topicId": "4.1.02", "topic": "Find the Pattern" }
+    ]
+  },
+  {
+    "gradeLevel": "4",
+    "compId": "4.2",
+    "comp": "Numbers up to 99999",
+    "topics": [
+      { "topicId": "4.2.01", "topic": "Arranging and Comparing Numbers" },
+      { "topicId": "4.2.02", "topic": "Rounding Numbers to Tenth and Hundredth Places" },
+      { "topicId": "4.2.03", "topic": "Addition and Subtraction of Numbers Containing 5 Digits" }
+    ]
+  },
+  {
+    "gradeLevel": "4",
+    "compId": "4.3",
+    "comp": "Multiplication and Division",
+    "topics": [
+      { "topicId": "4.3.01", "topic": "The concept of Multiples" },
+      { "topicId": "4.3.02", "topic": "Connecting Multiplication and Division" },
+      { "topicId": "4.3.03", "topic": "Multiplying Using Repetitive Addition" },
+      { "topicId": "4.3.04", "topic": "Multiplying Tens" },
+      { "topicId": "4.3.05", "topic": "Methods of Multiplying and Dividing" },
+      { "topicId": "4.3.06", "topic": "Multiplication With and Without a Carry" },
+      { "topicId": "4.3.07", "topic": "Multiplying 3 Numbers" },
+      { "topicId": "4.3.08", "topic": "Division With and Without Remainder" }
+    ]
+  },
+  {
+    "gradeLevel": "4",
+    "compId": "4.4",
+    "comp": "Geometry",
+    "topics": [
+      { "topicId": "4.4.01", "topic": "Introducing Angles" },
+      { "topicId": "4.4.02", "topic": "Characteristics of Squares" },
+      { "topicId": "4.4.03", "topic": "Characteristics of Rectangles" },
+      { "topicId": "4.4.04", "topic": "Designing Symmetrical Shapes" }
+    ]
+  },
+  {
+    "gradeLevel": "4",
+    "compId": "4.5",
+    "comp": "Measurements",
+    "topics": [
+      { "topicId": "4.5.01", "topic": "Circumference of a Rectangle" },
+      { "topicId": "4.5.02", "topic": "Circumference of a Square" },
+      { "topicId": "4.5.03", "topic": "Comparing Units of Length and Distance" },
+      { "topicId": "4.5.04", "topic": "Area of Rectangles and Squares" },
+      { "topicId": "4.5.05", "topic": "Comparing Units of Mass" },
+      { "topicId": "4.5.06", "topic": "Comparing Units of Capacity" }
+    ]
+  },
+  {
+    "gradeLevel": "4",
+    "compId": "4.6",
+    "comp": "Fractions and Decimals",
+    "topics": [
+      { "topicId": "4.6.01", "topic": "Demonstration of Fractions on the Number Line" },
+      { "topicId": "4.6.02", "topic": "Equivalent Fractions" },
+      { "topicId": "4.6.03", "topic": "Arranging and Comparing Fractions" },
+      { "topicId": "4.6.04", "topic": "Comparing Fractions to the Number 1" },
+      { "topicId": "4.6.05", "topic": "Adding and Multiplying Fractions" }
+    ]
+  },
+  {
+    "gradeLevel": "4",
+    "compId": "4.7",
+    "comp": "Time",
+    "topics": [
+      { "topicId": "4.7.01", "topic": "Reading and Writing Time from the Clock" }
+    ]
+  },
+  {
+    "gradeLevel": "5",
+    "compId": "5.1",
+    "comp": "Geometry",
+    "topics": [
+      { "topicId": "5.1.01", "topic": "Grids" },
+      { "topicId": "5.1.02", "topic": "Graphs using lines" },
+      { "topicId": "5.1.03", "topic": "Measuring an Angle" },
+      { "topicId": "5.1.04", "topic": "Parallelograms" },
+      { "topicId": "5.1.05", "topic": "Rhombus" },
+      { "topicId": "5.1.06", "topic": "Rectangles" },
+      { "topicId": "5.1.07", "topic": "Squares" },
+      { "topicId": "5.1.08", "topic": "Triangles" },
+      { "topicId": "5.1.09", "topic": "Circles" },
+      { "topicId": "5.1.10", "topic": "Shapes and Solids" },
+      { "topicId": "5.1.11", "topic": "Similarity and Identicality of Shapes" },
+      { "topicId": "5.1.12", "topic": "Movement of Identical Shapes" }
+    ]
+  },
+  {
+    "gradeLevel": "5",
+    "compId": "5.2",
+    "comp": "Natural Numbers",
+    "topics": [
+      { "topicId": "5.2.01", "topic": "Rounding Natural Numbers" },
+      { "topicId": "5.2.02", "topic": "Adding and Subtracting Natural Numbers" },
+      { "topicId": "5.2.03", "topic": "Comparing and Arranging Numbers" },
+      { "topicId": "5.2.04", "topic": "Multiplication of Natural Numbers" },
+      { "topicId": "5.2.05", "topic": "Least Common Multiple" }
+    ]
+  },
+  {
+    "gradeLevel": "5",
+    "compId": "5.3",
+    "comp": "Decimals and Fractions",
+    "topics": [
+      { "topicId": "5.3.01", "topic": "Understanding Fractions" },
+      { "topicId": "5.3.02", "topic": "Decimal Parts" },
+      { "topicId": "5.3.03", "topic": "Adding and Subtracting Fractions" },
+      { "topicId": "5.3.04", "topic": "Arranging Decimals" },
+      { "topicId": "5.3.05", "topic": "Adding and Subtracting Decimals" },
+      { "topicId": "5.3.06", "topic": "Multiplying Decimals by Natural Numbers" },
+      { "topicId": "5.3.07", "topic": "Division of Decimals" }
+    ]
+  },
+  {
+    "gradeLevel": "5",
+    "compId": "5.4",
+    "comp": "Measurements",
+    "topics": [
+      { "topicId": "5.4.01", "topic": "Area of a Triangle" },
+      { "topicId": "5.4.02", "topic": "Length" },
+      { "topicId": "5.4.03", "topic": "Conversion between different Units of mass" },
+      { "topicId": "5.4.04", "topic": "Conversion between different Units of Volume" },
+      { "topicId": "5.4.05", "topic": "Adding and Subtracting Time" }
+    ]
+  },
+  {
+    "gradeLevel": "6",
+    "compId": "6.1",
+    "comp": "Geometry",
+    "topics": [
+      { "topicId": "6.1.01", "topic": "Graphs" },
+      { "topicId": "6.1.02", "topic": "Straight Lines" },
+      { "topicId": "6.1.03", "topic": "Parallels and Perpendicular Lines" },
+      { "topicId": "6.1.04", "topic": "Angles in different Shapes" },
+      { "topicId": "6.1.05", "topic": "Types of Triangles" },
+      { "topicId": "6.1.06", "topic": "Parallelograms" },
+      { "topicId": "6.1.07", "topic": "Rhombus, Square, Rectangle" },
+      { "topicId": "6.1.08", "topic": "Symmetry" },
+      { "topicId": "6.1.09", "topic": "Trapezoid" },
+      { "topicId": "6.1.10", "topic": "Circulations" },
+      { "topicId": "6.1.11", "topic": "Similarities" },
+      { "topicId": "6.1.12", "topic": "Right Prism" }
+    ]
+  },
+  {
+    "gradeLevel": "6",
+    "compId": "6.2",
+    "comp": "Natural Numbers",
+    "topics": [
+      { "topicId": "6.2.01", "topic": "Addition and Subtraction of Natural Numbers" },
+      { "topicId": "6.2.02", "topic": "Multiplication of Natural Numbers" },
+      { "topicId": "6.2.03", "topic": "Division of Natural Numbers" },
+      { "topicId": "6.2.04", "topic": "Powers" },
+      { "topicId": "6.2.05", "topic": "Priorities in Mathematical Operations" },
+      { "topicId": "6.2.06", "topic": "Factoring Numbers" },
+      { "topicId": "6.2.07", "topic": "Highest Common Factor" },
+      { "topicId": "6.2.08", "topic": "Least Common Multiple" },
+      { "topicId": "6.2.09", "topic": "The Mean" }
+    ]
+  },
+  {
+    "gradeLevel": "6",
+    "compId": "6.3",
+    "comp": "Decimals and Fractions",
+    "topics": [
+      { "topicId": "6.3.01", "topic": "Addition of Complex Fractions" },
+      { "topicId": "6.3.02", "topic": "Multiplying Fractions" },
+      { "topicId": "6.3.03", "topic": "Dividing Fractions" },
+      { "topicId": "6.3.04", "topic": "Addition and Subtraction of Decimals" },
+      { "topicId": "6.3.05", "topic": "Multiplying Decimals" }
+    ]
+  },
+  {
+    "gradeLevel": "6",
+    "compId": "6.4",
+    "comp": "Measurements",
+    "topics": [
+      { "topicId": "6.4.01", "topic": "Units of Measuring Length" },
+      { "topicId": "6.4.02", "topic": "Calculating Circumference" },
+      { "topicId": "6.4.03", "topic": "Calculating Areas" },
+      { "topicId": "6.4.04", "topic": "Units of Measuring Volumes and Areas" },
+      { "topicId": "6.4.05", "topic": "Calculating the Area of a Parallelogram" },
+      { "topicId": "6.4.06", "topic": "Areas of Circles" },
+      { "topicId": "6.4.07", "topic": "Conversion between different Units of Time" }
+    ]
+  },
+  {
+    "gradeLevel": "6",
+    "compId": "6.5",
+    "comp": "Algebra and Numbers",
+    "topics": [
+      { "topicId": "6.5.01", "topic": "Algebraic Expressions" },
+      { "topicId": "6.5.02", "topic": "Algebraic Equations" },
+      { "topicId": "6.5.03", "topic": "Ratio and Proportion" },
+      { "topicId": "6.5.04", "topic": "Writing Decimals and Fractions as Percentages" }
+    ]
+  }
+]

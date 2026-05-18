@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SMS Simulator</title>
+</head>
+<body>
+  <h2>Send SMS</h2>
+
+  <input id="phone" placeholder="+111" />
+  <input id="text" placeholder="HELP B12" />
+  <button onclick="send()">Send</button>
+
+  <pre id="response"></pre>
+
+  <h3>Outgoing Messages</h3>
+  <button onclick="loadOutbox()">Refresh</button>
+  <pre id="outbox"></pre>
+
+<script>
+async function send() {
+  const phone = document.getElementById("phone").value;
+  const text = document.getElementById("text").value;
+
+  const res = await fetch("http://127.0.0.1:8000/sms/incoming", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ from_phone: phone, text })
+  });
+
+  const data = await res.json();
+  document.getElementById("response").innerText =
+    JSON.stringify(data, null, 2);
+}
+
+async function loadOutbox() {
+  const res = await fetch("http://127.0.0.1:8000/outbox");
+  const data = await res.json();
+  document.getElementById("outbox").innerText =
+    JSON.stringify(data, null, 2);
+}
+</script>
+</body>
+</html>
